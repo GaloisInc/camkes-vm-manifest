@@ -58,8 +58,7 @@
         <linkfile src="libutils" dest="libs/libutils"/>
     </project>
 
-    <!-- Changes in libsel4vmm -->
-    <project remote="podhrmic" name="seL4_libs" path="projects/seL4_libs" revision="devel">
+    <project name="seL4_libs" path="projects/seL4_libs">
         <linkfile src="libsel4allocman" dest="libs/libsel4allocman"/>
         <linkfile src="libsel4bench" dest="libs/libsel4bench"/>
         <linkfile src="libsel4debug" dest="libs/libsel4debug"/>
