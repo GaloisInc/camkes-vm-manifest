@@ -11,20 +11,14 @@
   -->
 
 <manifest>
-    <remote name="seL4"
-        fetch="."
-    />
-
-    <remote name="SEL4PROJ"
-        fetch="../SEL4PROJ"
-    />
+    <remote name="seL4" fetch="https://github.com/seL4"  />
 
     <remote name="podhrmic" fetch="https://github.com/podhrmic" />
 
+    <remote name="SEL4PROJ"  fetch="https://github.com/SEL4PROJ"  />
+
     <!-- default revision for each project, and name of the remote -->
-    <default revision="master"
-        remote="seL4"
-    />
+    <default revision="master"  remote="seL4" />
 
     <!-- list of 'projects' (i.e repositories), path is relative to the path in remote above -->
     <project name="seL4.git" path="kernel">
