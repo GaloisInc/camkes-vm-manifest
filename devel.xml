@@ -26,7 +26,7 @@
         <linkfile src="libsel4" dest="libs/libsel4"/>
     </project>
 
-    <project name="camkes-tool.git" path="tools/camkes" revision="next">
+    <project name="camkes-tool.git" path="tools/camkes" revision="master">
         <linkfile src="toplevel.mk" dest="Makefile"/>
         <linkfile src="Kbuild" dest="Kbuild"/>
         <linkfile src="docs/index.md" dest="camkes_README.md"/>
@@ -41,12 +41,31 @@
     </project>
 
     <project name="musllibc.git" path="libs/libmuslc" revision="sel4"/>
-    <project remote="SEL4PROJ" name="global-components.git" path="projects/global-components" revision="next"/>
+    <project remote="SEL4PROJ" name="global-components.git" path="projects/global-components"/>
 
     <project name="seL4_tools.git" path="projects/tools">
         <linkfile src="kbuild-tool" dest="tools/kbuild"/>
         <linkfile src="common-tool" dest="tools/common"/>
         <linkfile src="elfloader-tool" dest="tools/elfloader"/>
+    </project>
+
+    <project remote="galois" name="util_libs.git" path="projects/util_libs" revision="devel">
+        <linkfile src="libcpio" dest="libs/libcpio"/>
+        <linkfile src="libelf" dest="libs/libelf"/>
+        <linkfile src="libethdrivers" dest="libs/libethdrivers"/>
+        <linkfile src="libpci" dest="libs/libpci"/>
+        <linkfile src="libplatsupport" dest="libs/libplatsupport"/>
+        <linkfile src="libutils" dest="libs/libutils"/>
+        <linkfile src="libpicotcp/Kbuild" dest="libs/libpicotcp/Kbuild"/>
+        <linkfile src="libpicotcp/Kconfig" dest="libs/libpicotcp/Kconfig"/>
+        <linkfile src="libpicotcp/Makefile" dest="libs/libpicotcp/Makefile"/>
+        <linkfile src="libpicotcp/picoopts.h" dest="libs/libpicotcp/pico_defines.h"/>
+    </project>
+
+    <project name="picotcp.git" path="projects/picotcp" remote="SEL4PROJ">
+        <linkfile src="modules" dest="libs/libpicotcp/modules"/>
+        <linkfile src="stack" dest="libs/libpicotcp/stack"/>
+        <linkfile src="include" dest="libs/libpicotcp/include"/>
     </project>
 
     <project remote="galois" name="seL4_libs.git" path="projects/seL4_libs" revision="devel">
@@ -63,15 +82,6 @@
         <linkfile src="libsel4vka" dest="libs/libsel4vka"/>
         <linkfile src="libsel4vmm" dest="libs/libsel4vmm"/>
         <linkfile src="libsel4vspace" dest="libs/libsel4vspace"/>
-    </project>
-
-    <project remote="galois" name="util_libs.git" path="projects/util_libs" revision="devel">
-        <linkfile src="libcpio" dest="libs/libcpio"/>
-        <linkfile src="libelf" dest="libs/libelf"/>
-        <linkfile src="libethdrivers" dest="libs/libethdrivers"/>
-        <linkfile src="libpci" dest="libs/libpci"/>
-        <linkfile src="libplatsupport" dest="libs/libplatsupport"/>
-        <linkfile src="libutils" dest="libs/libutils"/>
     </project>
 
     <!-- Changes in the apps -->
@@ -92,6 +102,7 @@
         <linkfile src="apps/cma34cr_centos" dest="apps/cma34cr_centos"/>
         <linkfile src="apps/cma34cr_vchan" dest="apps/cma34cr_vchan"/>
         <linkfile src="apps/cxx" dest="apps/cxx"/>
+        <linkfile src="apps/cma34cr_picotcp" dest="apps/cma34cr_picotcp"/>
         <linkfile src="README.md" dest="README.md"/>
         <linkfile src="lwipopts.h" dest="projects/vm/liblwip/include/lwip/lwipopts.h"/>
     </project>
