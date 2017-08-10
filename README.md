@@ -1,5 +1,11 @@
 camkes-vm-manifest
 ==================
+Initialize with: 
+```
+repo init -u https://github.com/GaloisInc/camkes-vm-manifest -m devel.xml -b devel
+repo sync
+```
+
 The CAmkES VMM is a Virtual Machine Monitor that utilizes the CAmkES component platform.
 Due to the static nature of CAmkES systems the VMM is specified at build time to run
 on a particular hardware platform. Currently the VMM is mostly targeted to run on the
