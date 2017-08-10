@@ -6,7 +6,7 @@ repo init -u https://github.com/GaloisInc/camkes-vm-manifest -m devel.xml -b dev
 repo sync
 ```
 
-You will need to enable huge pages for QEMU/KVM, to do so edit `/etc/default/qemu-kvm` and set `KVM_HUGEPAGES=1` (see [here](https://help.ubuntu.com/community/KVM%20-%20Using%20Hugepages) for details)
+If youa are using a config with `HUGEPAGES=y`, You will need to enable huge pages for QEMU/KVM, to do so edit `/etc/default/qemu-kvm` and set `KVM_HUGEPAGES=1` (see [here](https://help.ubuntu.com/community/KVM%20-%20Using%20Hugepages) for details)
 
 
 The CAmkES VMM is a Virtual Machine Monitor that utilizes the CAmkES component platform.
