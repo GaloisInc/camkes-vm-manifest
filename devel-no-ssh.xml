@@ -94,7 +94,7 @@
 
 
     <!-- Changes in the apps -->
-    <project remote="galois" name="camkes-vm.git" path="projects/vm" revision="devel">
+    <project remote="galois" name="camkes-vm.git" path="projects/vm" revision="rumprun_integration">
         <!-- symlinks to make the project structure fit the build system -->
         <linkfile src="Kconfig" dest="Kconfig"/>
         <linkfile src="configs" dest="configs"/>
